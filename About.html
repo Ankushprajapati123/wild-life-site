@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About - Wildlife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div id="logo">
+      <img src="images/Elephent.jpeg" alt="Wildlife Logo">
+    </div>
+
+    <div id="menu-toggle">&#9776;</div>
+
+    <ul id="link">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="animal.html">Animal</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="map.html">Map</a></li>
+    </ul>
+  </nav>
+
+  <div class="about-container">
+    <h1>🌿 About Wildlife Conservation</h1>
+    <p>Wildlife conservation is essential for preserving the biodiversity of our planet. It involves protecting animal species and their habitats, ensuring ecological balance, and promoting sustainable coexistence between nature and humans.</p>
+
+    <div class="animal-info">
+      <img src="images/elephent2.jpeg" alt="Elephant">
+      <h2>About Elephants</h2>
+      <p>Elephants are the largest land animals on Earth. Known for their intelligence, memory, and social behavior, they play a vital role in maintaining forest ecosystems. Sadly, they are endangered due to poaching and habitat loss.</p>
+    </div>
+
+    <div class="animal-info">
+      <img src="images/linon.jpg" alt="Lion">
+      <h2>About Lions</h2>
+      <p>Lions, known as the kings of the jungle, are majestic and powerful predators. They live in groups called prides and symbolize strength and courage. Conservation efforts are crucial as their population continues to decline due to hunting and habitat destruction.</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('link').classList.toggle('active');
+    });
+  </script>
+
+</body>
+
+</html>

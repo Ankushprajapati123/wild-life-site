@@ -1,0 +1,218 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Make sure the relative path is correct */
+  background:
+    linear-gradient(to right, #dbeafe, #f0fdf4),
+    url('images/bg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #0f2027;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#logo img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+#logo img:hover {
+  transform: scale(1.1);
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+#link {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#link li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#link li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+#link li a:hover::after {
+  width: 100%;
+}
+
+#link li a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: #e0f7fa;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #203a43;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Mission Section */
+.mission {
+  padding: 60px 30px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2c5364;
+}
+
+.mission p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: auto;
+  color: #555;
+}
+
+/* Featured Animals */
+.featured-animals {
+  padding: 60px 30px;
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.featured-animals h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #2c5364;
+}
+
+.animal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.animal-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.animal-card:hover {
+  transform: scale(1.05);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.animal-card h3 {
+  padding: 15px;
+  font-size: 20px;
+  color: #203a43;
+}
+
+/* Footer */
+footer {
+  background: #203a43;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #link {
+    display: none;
+    flex-direction: column;
+    background: #203a43;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  #link.active {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .animal-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
